@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Trajan+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+
+header {
+  color: rgba(148, 97, 2, 0.762);
+  text-align: center;
+  padding: 30px 0;
+  background: linear-gradient(135deg, #fdf5e6, #f5deb3);
+  box-shadow: 0 2px 10px rgba(148, 97, 2, 0.1);
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Trajan Pro", "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(148, 97, 2, 0.1);
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: rgba(148, 97, 2, 1);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+}

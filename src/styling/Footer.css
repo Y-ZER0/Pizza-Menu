@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Trajan+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-weight: bold;
+  font-family: "Trajan Pro", "Cinzel", "Times New Roman", serif;
+  background: linear-gradient(
+    135deg,
+    rgba(148, 97, 2, 0.1),
+    rgba(148, 97, 2, 0.05)
+  );
+  border-top: 2px solid rgba(148, 97, 2, 0.2);
+  color: rgba(148, 97, 2, 0.8);
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 40px;
+}
+
+button {
+  background: linear-gradient(135deg, #ffd700, #ffb347);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8b4513;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  margin: 10px 5px;
+  min-width: 120px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffed4e, #ffc107);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  color: #654321;
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Footer content styling */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 5px 3px;
+    min-width: 100px;
+  }
+
+  button.primary {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 200px;
+  }
+}

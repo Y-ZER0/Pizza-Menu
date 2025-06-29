@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Trajan+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+
+.menu {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #fefefe;
+}
+
+.menu-title {
+  font-family: "Trajan Pro", "Cinzel", "Times New Roman", serif;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin: 40px 0;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(148, 97, 2, 0.762);
+  font-size: 36px;
+}
+
+.menu-title::before,
+.menu-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(148, 97, 2, 0.762),
+    transparent
+  );
+}
+
+.menu-title::before {
+  top: 0;
+}
+
+.menu-title::after {
+  bottom: 0;
+}
+
+.menu-description {
+  font-weight: 600;
+  font-family: "Trajan Pro", "Cinzel", "Times New Roman", serif;
+  font-size: 18px;
+  color: rgba(148, 97, 2, 0.8);
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.menu-pizzas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  justify-items: center;
+}
+
+.pizza {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+}
+
+.pizza:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pizza-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.pizza-name {
+  font-family: "Trajan Pro", "Cinzel", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(148, 97, 2, 0.9);
+  margin: 15px 0 10px 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.pizza-ingredients {
+  font-style: italic;
+  font-size: 16px;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.pizza p {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(148, 97, 2, 0.9);
+  margin: 10px 0;
+}
+
+.sold-out {
+  color: #ff4444;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(255, 68, 68, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .menu-pizzas {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .pizza {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 30px 15px;
+  }
+
+  .menu-pizzas {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px 10px;
+  }
+
+  .pizza {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .menu-description {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .menu-title {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+
+  .menu-title::before,
+  .menu-title::after {
+    width: 150px;
+  }
+
+  .pizza-name {
+    font-size: 20px;
+  }
+
+  .pizza-ingredients {
+    font-size: 14px;
+  }
+
+  .pizza-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 20px 10px;
+  }
+
+  .menu-pizzas {
+    gap: 20px;
+    padding: 15px 5px;
+  }
+
+  .pizza {
+    padding: 12px;
+  }
+
+  .menu-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .menu-title::before,
+  .menu-title::after {
+    width: 100px;
+  }
+
+  .pizza-img {
+    height: 150px;
+  }
+
+  .pizza-name {
+    font-size: 18px;
+  }
+
+  .pizza-ingredients {
+    font-size: 13px;
+  }
+
+  .pizza p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .menu-pizzas {
+    padding: 10px 0;
+  }
+
+  .pizza {
+    padding: 10px;
+  }
+
+  .pizza-img {
+    height: 120px;
+  }
+}
